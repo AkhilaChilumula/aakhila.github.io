@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For You</title>
+  <meta name="description" content="A small love letter, made with care." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker">A quiet corner of the internet</p>
+      <h1>For you, always.</h1>
+      <p class="sub">
+        I wanted to put into words what I feel — gently, honestly, and beautifully.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Our story</h2>
+      <p class="muted">
+        Replace this with a short paragraph about how it began — the moment you knew, or what felt different.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>What I admire</h3>
+        <ul class="list">
+          <li>Your steadiness when life gets loud.</li>
+          <li>The way you show up — consistently.</li>
+          <li>How you make small things feel meaningful.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>My favorite moments</h3>
+        <ul class="list">
+          <li>That day we couldn’t stop laughing.</li>
+          <li>When you supported me without needing to be asked.</li>
+          <li>The quiet, ordinary moments that feel like home.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>A promise</h2>
+      <p class="muted">
+        Write a simple promise here — something real. (Example: “I will choose you in the big moments and the small ones.”)
+      </p>
+    </section>
+
+    <section class="final card">
+      <div class="final-top">
+        <h2>One last thing</h2>
+        <p class="muted">Only open when you’re ready.</p>
+      </div>
+
+      <button class="btn" id="revealBtn" type="button">Open my message</button>
+
+      <div class="letter" id="letter" aria-hidden="true">
+        <p class="letter-title">My message to you</p>
+        <p>
+          <!-- PUT YOUR VERY PERSONAL MESSAGE HERE -->
+          I love you in a way that feels calm and certain. Thank you for being my safe place,
+          for understanding me, and for loving me with intention. You make my life softer,
+          brighter, and more real.
+        </p>
+        <p>
+          I’m proud of us — of what we’ve built, what we’ve learned, and what we’re becoming.
+          And no matter what the days look like, I want you to know this:
+          you are deeply loved, and you will never be alone in this life with me.
+        </p>
+        <p class="signature">— Akhila</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted small">Made with love. Kept with care.</p>
+    </footer>
+  </main>
+
+  <script>
+    const btn = document.getElementById("revealBtn");
+    const letter = document.getElementById("letter");
+
+    btn.addEventListener("click", () => {
+      letter.classList.add("show");
+      letter.setAttribute("aria-hidden", "false");
+      btn.style.display = "none";
+      letter.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  </script>
+</body>
+</html>
